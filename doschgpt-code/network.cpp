@@ -281,7 +281,7 @@ bool network_get_completion(char * hostname, int port, char * api_key, char * mo
                 char * messageStartPointer = errorMsgKeyPtr + 12;
 
                 //Locate message termination
-                char * messageEndPointer = strstr(messageStartPointer, "\",\r\n");
+                char * messageEndPointer = strstr(messageStartPointer, "\",");
 
                 if(messageEndPointer != NULL){
                     int length = messageEndPointer - messageStartPointer;
