@@ -8,7 +8,7 @@ Photos of the client running on [my 1984 IBM 5155 Portable PC](https://github.co
 
 As there are no native HTTPS for DOS, a [HTTP-to-HTTPS proxy](https://github.com/yeokm1/http-to-https-proxy) like this I've written running on a modern machine is needed.
 
-This program is heavily based on sample code in the DOS networking [MTCP library](http://brutmanlabs.org/mTCP/). The program also requires a [DOS Packet Driver](https://en.wikipedia.org/wiki/PC/TCP_Packet_Driver) to be loaded for the machine/VM.
+This program is heavily based on sample code in the DOS networking [MTCP library](http://brutmanlabs.org/mTCP/). The program also requires a [DOS Packet Driver](https://en.wikipedia.org/wiki/PC/TCP_Packet_Driver) to be loaded and MTCP to be set for the machine/VM.
 
 **This program was written in a short time as a toy project. It has not been vigorously tested thus is NOT meant for production use.**
 
@@ -32,7 +32,13 @@ Application binary can be found in the `release` directory but do the following 
 * Socket connect timeout (ms): How long to wait when attempting to connect to proxy
 * Socket response timeout (ms): How long to wait for OpenAI's servers to reply
 
-4. Just launch `doschgpt.exe` in your machine and fire away. Press the ESC key to leave. Your may use the following arguments for debug use
+4. Ensure that your DOS environment has loaded the following
+
+* Packet Driver
+* MTCP Environment variable
+* MTCP file configured by DHCP
+
+5. Just launch `doschgpt.exe` in your machine and fire away. Press the ESC key to leave. Your may use the following arguments for debug use
 
 * `-dri`: Print the outgoing port, number of prompt and completion tokens used after each request
 * `-drr`: Display the raw server return headers and json reply
