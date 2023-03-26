@@ -35,8 +35,8 @@ Application binary can be found in the `release` directory but do the following 
 4. Ensure that your DOS environment has loaded the following
 
 * Packet Driver
-* MTCP Environment variable
-* MTCP file configured by DHCP
+* MTCP Config Environment variable
+* MTCP Config file configured by DHCP
 
 5. Just launch `doschgpt.exe` in your machine and fire away. Press the ESC key to leave. Your may use the following arguments for debug use
 
